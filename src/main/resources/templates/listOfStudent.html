@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+
+</head>
+
+<body class="container">
+<div>
+    <p> <a href="/addStudent">Add new Student</a></p>
+</div>
+<div>
+    <table class="centeredTable">
+        <tr>
+            <th>All Students</th>
+            </tr>
+
+            <td>
+                <li th:each="student : ${allStudents}">
+                    <a th:text="${student.id}"></a>
+                    <a th:text="${student.name}"></a>
+                    <a th:text="${student.gender}"></a>
+                    <a th:text="${student.PrimaryContactName}"></a>
+                    <a th:text="${student.grade}"></a>
+                    <a th:text="${student.contactNumber}"></a>
+                    <a th:text="${student.homeAddress}"></a>
+                    <a th:text="${student.email}"></a>
+                </li>
+            </td>
+<!--            <td>-->
+<!--                <li th:each="student : ${allStudents}">-->
+<!--                    <a th:text="${student.gender}"></a>-->
+<!--                </li>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <li th:each="student : ${allStudents}">-->
+<!--                    <a th:text="${student.grade}"></a>-->
+<!--                </li>-->
+<!--            </td>-->
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>
